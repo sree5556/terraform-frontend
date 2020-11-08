@@ -1,14 +1,9 @@
-resource "aws_ami" "example" {
-  name                = "terraform-example"
-  root_device_name    = "/dev/xvda"
-
-  ebs_block_device {
-    device_name = "/dev/xvda"
-    volume_size = 8
-  }
+resource "aws_launch_template" "" {
+  image_id = ""
+  instance_type = ""
 }
-
-resource "aws_ami_from_instance" "example" {
-  name               = "terraform-example"
-  source_instance_id = "i-xxxxxxxx"
+resource "aws_autoscaling_group" "" {
+  availability_zones = ["us-east-2"]
+  max_size = 0
+  min_size = 0
 }
