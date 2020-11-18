@@ -1,4 +1,3 @@
-//inorder to create auto-scaling-group -- u requiredd to do lunch-template
 resource "aws_launch_template" "template" {
   name = "frontend"
   image_id = data.aws_ami.nginx-ami.id
@@ -12,6 +11,8 @@ resource "aws_launch_template" "template" {
     }
   }
 }
+
+#inorder to create auto-scaling-group -- u required to do create lunch-template that is in above
 
 resource "aws_autoscaling_group" "asg" {
   max_size = 0
